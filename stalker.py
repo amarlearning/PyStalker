@@ -25,15 +25,22 @@ def find_what_you_are_looking_for(scrapper) :
             catch = re.sub(r"\s", "", catch)
             print_in_style(catch)
 
-def get_webpage_data() :
-    webpage = urllib.urlopen(generate_url())
+def check_connection() :
+    response = urllib.urlopen(generate_url())
+    if response == None :
+        print "Check your Internet conneciton! Not working."
+    else :
+        get_webpage_data(response)
+    
+
+def get_webpage_data(webpage) :
     scrapper = BeautifulSoup(webpage , 'html.parser')
     matches = scrapper.prettify()
     find_what_you_are_looking_for(scrapper)
 
 
 def main() :
-    get_webpage_data()
+    check_connection()
 
 
 if __name__ == "__main__" :
