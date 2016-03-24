@@ -2,12 +2,10 @@ import urllib
 import re
 from bs4 import BeautifulSoup
 
-
 def print_in_style(catch) :
     print "--------------------------"
     print "| Last visit : " +catch[10:]+" |"
     print "--------------------------"
-
 
 def generate_url() :
     username = raw_input("Stalker! You know the username of that guy, enter it : ")
@@ -25,23 +23,20 @@ def find_what_you_are_looking_for(scrapper) :
             catch = re.sub(r"\s", "", catch)
             print_in_style(catch)
 
+def get_webpage_data(webpage) :
+    scrapper = BeautifulSoup(webpage , 'html.parser')
+    matches = scrapper.prettify()
+    find_what_you_are_looking_for(scrapper)
+
 def check_connection() :
     response = urllib.urlopen(generate_url())
     if response == None :
         print "Check your Internet conneciton! Not working."
     else :
         get_webpage_data(response)
-    
-
-def get_webpage_data(webpage) :
-    scrapper = BeautifulSoup(webpage , 'html.parser')
-    matches = scrapper.prettify()
-    find_what_you_are_looking_for(scrapper)
-
 
 def main() :
     check_connection()
-
-
+    
 if __name__ == "__main__" :
     main()
