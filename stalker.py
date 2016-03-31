@@ -12,6 +12,18 @@ def generate_url() :
     url = "http://codeforces.com/profile/" + username
     return url
 
+def space() :
+    print ""
+
+def menu() :
+    print "Stalkers menu : "
+    print "1. Enter the username of that guy."
+    print "2. Stalk every user you have stalked till now."
+    print ""
+    index = raw_input("Enter the index : ")
+    return index
+    
+
 def find_what_you_are_looking_for(scrapper) :
     matches = scrapper.find('div',{'id':'pageContent'})
     match = matches.find('div',{'class':'roundbox'})
@@ -36,7 +48,10 @@ def check_connection() :
         get_webpage_data(response)
 
 def main() :
-    check_connection()
+    space()
+    print "\t\t \tPYSTALKER\t\t"
+    space()
+    value = menu()
     
 if __name__ == "__main__" :
     main()
