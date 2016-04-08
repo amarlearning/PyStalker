@@ -2,10 +2,10 @@ import urllib
 import re
 from bs4 import BeautifulSoup
 
-# def print_in_style(catch) :
-#     print "--------------------------"
-#     print "| Last visit : " +catch[10:]+" |"
-#     print "--------------------------"
+def print_in_style(catch) :
+    print "--------------------------"
+    print "| Last visit : " +catch[10:]+" |"
+    print "--------------------------"
 
 def generate_url() :
     username = raw_input("Stalker! You know the username of that guy, enter it : ")
@@ -25,7 +25,7 @@ def menu() :
 
 def call_defined_function(value) :
     if value is 1 :
-        # call_check_username_function()
+        check_connection()
         print ""
         check_connection()
     if value is 2 :
