@@ -29,7 +29,7 @@ def call_defined_function(value) :
         print ""
         check_connection()
     if value is 2 :
-        # call_all_saved_name()
+        call_all_saved_name()
         
     else :
         print "You entered wrong index, Try again!"
