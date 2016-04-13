@@ -35,5 +35,5 @@ python stalker_ver01.py
 ##License
 [\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
-Built with ♥ by Amar Prakash Pandey(@amarlearning) under MIT License
+Built with ♥ by Amar Prakash Pandey(@amarlearning) under MIT License <br>
 You can find a copy of the License at http://amarlearning.mit-license.org/
