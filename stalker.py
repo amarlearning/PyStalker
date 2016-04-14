@@ -52,7 +52,7 @@ def space() :
 def regex(username) : 
     regex_pattern = r'^[A-Za-z0-9_]+$'
     match = re.findall(regex_pattern, username)
-    if match == 1 :
+    if len(match) == 1 :
         return 1
     else :
         return 0
@@ -148,7 +148,6 @@ def call_defined_function(value) :
     
 def main() :
     """everythings starts from here i.e. main()"""
-    username = ""
     flag = 0
     clear()
     call_defined_function(menu(flag))
