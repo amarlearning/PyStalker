@@ -71,7 +71,7 @@ python stalker_ver01.py
 ***
 
 ## Supported platforms
-[[Back to top]](https://github.com/prodicus/tnote#index)
+[:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 | OS | Support status |
 | --- | --- |
