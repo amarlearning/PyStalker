@@ -72,6 +72,8 @@ def show_all_data() :
     for user in users_list :
         puts(colored.yellow("\t"+str(loop)+". "+user))
         loop = loop + 1
+    if loop == 1 :
+        puts(colored.red("\tNo entries found!"))
     puts(colored.magenta("\tNote : press '1' to return back to menu."))
     puts(colored.magenta("\tNote : press '0' to exit."))
     x = int(raw_input("\tAction : "))
