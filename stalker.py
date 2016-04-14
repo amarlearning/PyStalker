@@ -69,22 +69,25 @@ def show_all_data() :
     file_content = open(file_path)
     users_list = file_content.read().split()
     puts(colored.green("\tList of entries present in data file."))
+    space()
     for user in users_list :
         puts(colored.yellow("\t"+str(loop)+". "+user))
         loop = loop + 1
     if loop == 1 :
         puts(colored.red("\tNo entries found!"))
+    space()
     puts(colored.magenta("\tNote : press '1' to return back to menu."))
     puts(colored.magenta("\tNote : press '0' to exit."))
+    space()
     x = int(raw_input("\tAction : "))
     if(x == 1) :
         flag = 0
-        menu(flag)
+        call_defined_function(menu(flag))
     elif(x == 0) :
         clear()
     else :
         flag = 1
-        menu(flag)
+        call_defined_function(menu(flag))
 
 def menu(flag) :
     """menu for pystalker take option and call desired function"""
