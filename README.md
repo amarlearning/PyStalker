@@ -19,7 +19,7 @@ A very simple python script to check what your friend are doing on coding sites.
 
 ***
 
-##index
+##Index
 
 - [Features](#features)
 - [Installation](#installation)
