@@ -16,7 +16,9 @@
 ```
 
 A very simple python script to check what your friend are doing on coding sites. You can see you friends **Last visit**, **Last question solved**, **Last contest given**. Currently, i am working on the *version02* of script. You can download the version01 of this script [here!](https://github.com/amarlearning/PyStalker.git)
+
 ***
+
 ##index
 
 - [Features](#features)
@@ -27,7 +29,9 @@ A very simple python script to check what your friend are doing on coding sites.
 - [Screenshots](#screenshots)
 - [Issues](#issues)
 - [License](#license)
+
 ***
+
 ##Features
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
@@ -38,7 +42,9 @@ A very simple python script to check what your friend are doing on coding sites.
   - you can stalk any user anonymous.
 - **Secure** : Belive me it's secure, till you take care of data file (*no playing*). 
 - **Text Highlighting is cross platform** - Supports Linux, MAC, Windows for the terminal based highlighting.
+
 ***
+
 ##Installation
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
@@ -61,7 +67,9 @@ python stalker.py
 cd PyStalker/version01
 python stalker_ver01.py
 ```
+
 ***
+
 ## Supported platforms
 [[Back to top]](https://github.com/prodicus/tnote#index)
 
@@ -76,7 +84,9 @@ python stalker_ver01.py
 
 ![PyStalker](https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/1.jpg?token=AI8v2YYvClFkyvh_2VeZGPz5IAsSA1p5ks5W_O_wwA%3D%3D)
 ![Pystalker](https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/2.jpg?token=AI8v2XfIJxKZgAELUhviP7xu_y4VUSG-ks5W_PBswA%3D%3D)
+
 ***
+
 ## Issues
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
@@ -85,12 +95,12 @@ You can report the bugs at the [issue tracker](https://github.com/amarlearning/P
 **OR**
 
 You can [tweet me](https://twitter.com/amarpandey007) if you can't get it to work. In fact, you should tweet me anyway.
+
 ***
+
 ##License
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 Built with ♥ by Amar Prakash Pandey([@amarlearning](http://github.com/amarlearning)) under [MIT License](http://amarlearning.mit-license.org/) 
 
 You can find a copy of the License at http://amarlearning.mit-license.org/
-You can find a copy of the License at http://amarlearning.mit-license.org/
-<br>
