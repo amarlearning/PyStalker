@@ -1,5 +1,5 @@
 # PyStalker
-![Build system information](https://travis-ci.org/amarlearning/PyStalker.svg?branch=master) [![Requirements Status](https://requires.io/github/amarlearning/PyStalker/requirements.svg?branch=master)](https://requires.io/github/amarlearning/PyStalker/requirements/?branch=master) ![MIT License](https://img.shields.io/pypi/l/pyzipcode-cli.svg)
+[![Build Status](https://travis-ci.org/amarlearning/PyStalker.svg?branch=master)](https://travis-ci.org/amarlearning/PyStalker) ![MIT License](https://img.shields.io/pypi/l/pyzipcode-cli.svg) [![Requirements Status](https://requires.io/github/amarlearning/PyStalker/requirements.svg?branch=master)](https://requires.io/github/amarlearning/PyStalker/requirements/?branch=master) 
 
 A very simple python script to check what your friend are doing on coding sites. You can see you friends **Last visit**, **Last question solved**, **Last contest given**. Currently, i am working on the *version02* of script. You can download the version01 of this script [here!](https://github.com/amarlearning/PyStalker.git)
 
