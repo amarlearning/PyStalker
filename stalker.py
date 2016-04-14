@@ -49,17 +49,29 @@ def space() :
     """providing one line space in the console when needed"""
     print ""
 
+def regex(username) : 
+    regex_pattern = r'^[A-Za-z0-9_]+$'
+    match = re.findall(regex_pattern, username)
+    if match == 1 :
+        return 1
+    else :
+        return 0
 
 def add_name_to_data(username) :
     """adding a username to the data file"""
-    cwd = os.getcwd()
-    file_path = cwd+"\DATA"
-    file_content = open(file_path,'a')
-    username = " " + username
-    file_content.write(username)
-    file_content.close()
-    flag = 2
-    call_defined_function(menu(flag))
+    flag = regex(username)
+    if flag == 1 :
+        cwd = os.getcwd()
+        file_path = cwd+"\DATA"
+        file_content = open(file_path,'a')
+        username = " " + username
+        file_content.write(username)
+        file_content.close()
+        flag = 2
+        call_defined_function(menu(flag))
+    else :
+        flag = 3
+        call_defined_function(menu(flag))
 
 def show_all_data() :
     """showing all entries present in the data file"""
@@ -74,7 +86,7 @@ def show_all_data() :
         puts(colored.yellow("\t"+str(loop)+". "+user))
         loop = loop + 1
     if loop == 1 :
-        puts(colored.red("\tNo entries found!"))
+        puts(colored.cyan("\tmessage : No entries found!"))
     space()
     puts(colored.magenta("\tNote : press '1' to return back to menu."))
     puts(colored.magenta("\tNote : press '0' to exit."))
@@ -100,6 +112,10 @@ def menu(flag) :
         flag = 0
     elif flag == 2 :
         puts(colored.yellow("\tsuccess : username successfully added to data file."))
+        space()
+        flag = 0
+    elif flag == 3 :
+        puts(colored.red("\terror : invalid username entered."))
         space()
         flag = 0
     puts(colored.green("\t(1) Stalk for one input username. "))
