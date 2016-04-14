@@ -2,11 +2,11 @@
 [![Build Status](https://travis-ci.org/amarlearning/PyStalker.svg?branch=master)](https://travis-ci.org/amarlearning/PyStalker) ![MIT License](https://img.shields.io/pypi/l/pyzipcode-cli.svg) [![Requirements Status](https://requires.io/github/amarlearning/PyStalker/requirements.svg?branch=master)](https://requires.io/github/amarlearning/PyStalker/requirements/?branch=master) 
 
 ```
-                       ___________
-                      |_________//
-                      | |      //
-                      | |_____//        
-                      |_|____//     
+                       ____________
+                      |__________//
+                      | |       //
+                      | |______//        
+                      |_|_____//     
                       | | \\    //
                       | |  \\  // _______ ________   __                   _____  ______
                       | |   \\// \\       \__  __/  //\\   ||     ||  // ||     |    //
