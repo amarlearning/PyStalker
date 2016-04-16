@@ -100,27 +100,27 @@ def delete_a_username(delete_node) :
 
 def notification(flag) :
     if flag == 1 :
-        puts(colored.red("\terror : wrong value entered! input correct value."))
+        puts(colored.red("error : wrong value entered! input correct value."))
         space()
         flag = 0
     elif flag == 2 :
-        puts(colored.yellow("\tsuccess : username successfully added to data file."))
+        puts(colored.yellow("success : username successfully added to data file."))
         space()
         flag = 0
     elif flag == 3 :
-        puts(colored.red("\terror : invalid username entered."))
+        puts(colored.red("error : invalid username entered."))
         space()
         flag = 0
     elif flag == 4 :
-        puts(colored.red("\terror : username already present."))
+        puts(colored.red("error : username already present."))
         space()
         flag = 0
     elif flag == 5 :
-        puts(colored.red("\terror : username not present in list."))
+        puts(colored.red("error : username not present in list."))
         space()
         flag = 0
     elif flag == 6 :
-        puts(colored.yellow("\tsuccess : username deleted successfully."))
+        puts(colored.yellow("success : username deleted successfully."))
         space()
         flag = 0
 
@@ -145,6 +145,55 @@ def add_name_to_data(username) :
         flag = 3
         call_defined_function(menu(flag))
 
+def get_webpage_data(webpage,username) :
+    scrapper = BeautifulSoup(webpage , 'html.parser')
+    matches = scrapper.prettify()
+    find_what_you_are_looking_for(scrapper,username)
+
+
+def print_in_style(catch,username) :
+    table = [[1,username,catch[10:]]]
+    headers = ["Sno.","Username", "Last Visit"]
+    print tabulate(table, headers, tablefmt="grid")
+
+def find_what_you_are_looking_for(scrapper,username) :
+    matches = scrapper.find('div',{'id':'pageContent'})
+    match = matches.find('div',{'class':'roundbox'})
+    match = match.find('ul')
+    for li in match.find_all('li') :
+        catch = li.get_text()
+        if "Last visit" in catch :
+            catch = catch.strip()
+            catch = re.sub(r"\s", "", catch)
+            print_in_style(catch,username)
+
+def check_connection(username) :
+    url = "http://codeforces.com/profile/" + username
+    response = urllib.urlopen(url)
+    if response == None :
+        print "Check your Internet conneciton! Not working."
+    else :
+        get_webpage_data(response,username)
+
+def add_new_name(username) :
+    """adding a username to the data file then stalking"""
+    flag = regex(username)
+    if flag == 1 :
+        carry = check_already_present(username)
+        if carry == 0 :
+            cwd = os.getcwd()
+            file_path = cwd+"\DATA"
+            file_content = open(file_path,'a')
+            username = " " + username
+            file_content.write(username)
+            file_content.close()
+        else :
+            flag = 4
+            call_defined_function(menu(flag))    
+    else :
+        flag = 3
+        call_defined_function(menu(flag))
+
 def show_all_data() :
     """showing all entries present in the data file"""
     loop = 1
@@ -152,18 +201,18 @@ def show_all_data() :
     file_path = cwd+"\DATA"
     file_content = open(file_path)
     users_list = file_content.read().split()
-    puts(colored.green("\tList of entries present in data file."))
+    puts(colored.green("List of entries present in data file."))
     space()
     for user in users_list :
-        puts(colored.yellow("\t"+str(loop)+". "+user))
+        puts(colored.yellow(str(loop)+". "+user))
         loop = loop + 1
     if loop == 1 :
-        puts(colored.cyan("\tmessage : No entries found!"))
+        puts(colored.cyan("message : No entries found!"))
     space()
-    puts(colored.magenta("\tNote : press '1' to return back to menu."))
-    puts(colored.magenta("\tNote : press '0' to exit."))
+    puts(colored.magenta("Note : press '1' to return back to menu."))
+    puts(colored.magenta("Note : press '0' to exit."))
     space()
-    x = int(raw_input("\tAction : "))
+    x = int(raw_input("Action : "))
     if(x == 1) :
         flag = 0
         call_defined_function(menu(flag))
@@ -176,34 +225,47 @@ def show_all_data() :
 def menu(flag) :
     """menu for pystalker take option and call desired function"""
     head()
-    puts(colored.magenta("\tStalkers menu : "))
+    puts(colored.magenta("Stalkers menu : "))
     space()
     notification(flag)
-    puts(colored.green("\t(1) Stalk for one input username. "))
-    puts(colored.green("\t(2) Add a username to data file. "))
-    puts(colored.green("\t(3) Delete a username from data file. "))
-    puts(colored.green("\t(4) View all data entry. "))
-    puts(colored.green("\t(5) Stalk for every data entry. "))
-    puts(colored.yellow("\tDoc : press '7' to see Documentation."))
-    puts(colored.red("\tNote : press '0' to exit!"))
+    puts(colored.green("(1) Stalk for one input username. "))
+    puts(colored.green("(2) Add a username to data file. "))
+    puts(colored.green("(3) Delete a username from data file. "))
+    puts(colored.green("(4) View all data entry. "))
+    puts(colored.green("(5) Stalk for every data entry. "))
+    puts(colored.yellow("Doc : press '7' to see Documentation."))
+    puts(colored.red("Note : press '0' to exit!"))
     space()
-    index = int(raw_input("\tAction : "))
+    index = int(raw_input("Action : "))
     return index
 
 def call_defined_function(value) :
     if(value == 1):
-        puts(colored.blue("working"))
+        """stalking some random remembered username ? go ahead!"""
+        head()
+        puts(colored.green("Fill out the username : "))
+        username = raw_input()
+        space()
+        puts(colored.cyan("Do you want to save this username to data file[Y/N] :"))
+        what_to_do = raw_input()
+        space()
+        what_to_do = what_to_do.lower()
+        if what_to_do == 'y' :
+            add_new_name(username)
+            check_connection(username)
+        else :
+            check_connection(username)
     elif(value == 2):
         """add a username to the data file"""
         head()
-        puts(colored.green("\tFill out the username : "))
-        username = raw_input("\t")
+        puts(colored.green("Fill out the username : "))
+        username = raw_input()
         add_name_to_data(username)
     elif(value == 3) :
         """delete a username from the data file"""
         head()
-        puts(colored.green("\tFill out the username : "))
-        delete_node = raw_input("\t")
+        puts(colored.green("Fill out the username : "))
+        delete_node = raw_input()
         delete_a_username(delete_node)
     elif(value == 4): 
         """display all the data present in the data file."""
