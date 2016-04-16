@@ -4,7 +4,7 @@
 # @Email:  amar.om1994@gmail.com  
 # @Github username: @amarlearning
 # @Last Modified by: Amar Prakash Pandey  
-# @Last Modified time: 2016-04-15
+# @Last Modified time: 2016-04-16
 # MIT License. You can find a copy of the License
 # @http://amarlearning.mit-license.org
 
@@ -26,13 +26,13 @@ def head() :
          ____________
         |__________//
         | |       //
-        | |______//        
-        |_|_____//     
+        | |______//
+        |_|_____//
         | | \\    //
         | |  \\  // _______ ________   __                   _____  ______
         | |   \\// \\       \__  __/  //\\   ||     ||  // ||     |    //
         | |    ||   \\_____    | |   //__\\  ||     ||//   ||____ |___//
-        | |    ||         //   | |  //----\\ ||     ||\\   ||     |\\
+        | |    ||         //   | |  //====\\ ||     ||\\   ||     |\\
         |_|    ||   _____//    |_| //      \\||____ ||  \\ ||____ | \\
                                   
 
@@ -68,6 +68,61 @@ def check_already_present(username) :
         if username == user :
             loop = 1
     return loop
+
+def delete_a_username(delete_node) :
+    cwd = os.getcwd()
+    file_path = cwd+"\DATA"   
+    file_content = open(file_path)
+    file_read = file_content.read()
+    users_list = file_read.split()
+    print users_list
+    loop = 0
+    flag = -10
+    for user in users_list :
+        if delete_node == user :
+            flag = loop
+        loop = loop + 1
+    if flag > -1 :
+        del users_list[flag]
+        print users_list
+        cwd = os.getcwd()
+        file_path = cwd+"\DATA"   
+        file_content = open(file_path,'w')
+        for user in users_list :
+            user = " " + user
+            file_content.write(user)
+        file_content.close()
+        flag = 6
+        call_defined_function(menu(flag))
+    else :
+        flag = 5
+        call_defined_function(menu(flag))
+
+def notification(flag) :
+    if flag == 1 :
+        puts(colored.red("\terror : wrong value entered! input correct value."))
+        space()
+        flag = 0
+    elif flag == 2 :
+        puts(colored.yellow("\tsuccess : username successfully added to data file."))
+        space()
+        flag = 0
+    elif flag == 3 :
+        puts(colored.red("\terror : invalid username entered."))
+        space()
+        flag = 0
+    elif flag == 4 :
+        puts(colored.red("\terror : username already present."))
+        space()
+        flag = 0
+    elif flag == 5 :
+        puts(colored.red("\terror : username not present in list."))
+        space()
+        flag = 0
+    elif flag == 6 :
+        puts(colored.yellow("\tsuccess : username deleted successfully."))
+        space()
+        flag = 0
 
 def add_name_to_data(username) :
     """adding a username to the data file"""
@@ -123,22 +178,7 @@ def menu(flag) :
     head()
     puts(colored.magenta("\tStalkers menu : "))
     space()
-    if flag == 1 :
-        puts(colored.red("\terror : wrong value entered! input correct value."))
-        space()
-        flag = 0
-    elif flag == 2 :
-        puts(colored.yellow("\tsuccess : username successfully added to data file."))
-        space()
-        flag = 0
-    elif flag == 3 :
-        puts(colored.red("\terror : invalid username entered."))
-        space()
-        flag = 0
-    elif flag == 4 :
-        puts(colored.red("\terror : username already present."))
-        space()
-        flag = 0
+    notification(flag)
     puts(colored.green("\t(1) Stalk for one input username. "))
     puts(colored.green("\t(2) Add a username to data file. "))
     puts(colored.green("\t(3) Delete a username from data file. "))
@@ -159,7 +199,14 @@ def call_defined_function(value) :
         puts(colored.green("\tFill out the username : "))
         username = raw_input("\t")
         add_name_to_data(username)
+    elif(value == 3) :
+        """delete a username from the data file"""
+        head()
+        puts(colored.green("\tFill out the username : "))
+        delete_node = raw_input("\t")
+        delete_a_username(delete_node)
     elif(value == 4): 
+        """display all the data present in the data file."""
         head()
         show_all_data()
     elif(value == 0):
