@@ -50,6 +50,7 @@ def space() :
     print ""
 
 def regex(username) : 
+    """validating username using regular expression"""
     regex_pattern = r'^[A-Za-z0-9_]+$'
     match = re.findall(regex_pattern, username)
     if len(match) == 1 :
@@ -58,6 +59,7 @@ def regex(username) :
         return 0
 
 def check_already_present(username) :
+    """because redundancy is not good"""
     loop = 0
     cwd = os.getcwd()
     file_path = cwd+"\DATA"   
@@ -70,6 +72,7 @@ def check_already_present(username) :
     return loop
 
 def delete_a_username(delete_node) :
+    """no need to stalk everyone everytime"""
     cwd = os.getcwd()
     file_path = cwd+"\DATA"   
     file_content = open(file_path)
@@ -99,6 +102,7 @@ def delete_a_username(delete_node) :
         call_defined_function(menu(flag))
 
 def notification(flag) :
+    """notifications tell us what going on behind the scene"""
     if flag == 1 :
         puts(colored.red("error : wrong value entered! input correct value."))
         space()
@@ -240,6 +244,7 @@ def menu(flag) :
     return index
 
 def call_defined_function(value) :
+    """call the function that user requested"""
     if(value == 1):
         """stalking some random remembered username ? go ahead!"""
         head()
