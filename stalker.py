@@ -4,7 +4,7 @@
 # @Email:  amar.om1994@gmail.com  
 # @Github username: @amarlearning
 # @Last Modified by: Amar Prakash Pandey  
-# @Last Modified time: 2016-04-16
+# @Last Modified date: 2016-04-17
 # MIT License. You can find a copy of the License
 # @http://amarlearning.mit-license.org
 
@@ -248,18 +248,15 @@ def call_defined_function(value) :
     if(value == 1):
         """stalking some random remembered username ? go ahead!"""
         head()
-        puts(colored.green("Fill out the username : "))
+        puts(colored.green("Fill out the username [anonymous stalking] : "))
         username = raw_input()
         space()
-        puts(colored.cyan("Do you want to save this username to data file[Y/N] :"))
-        what_to_do = raw_input()
-        space()
-        what_to_do = what_to_do.lower()
-        if what_to_do == 'y' :
-            add_new_name(username)
+        what_to_do = regex(username)
+        if what_to_do == 1 :
             check_connection(username)
         else :
-            check_connection(username)
+            flag = 3
+            call_defined_function(menu(flag))
     elif(value == 2):
         """add a username to the data file"""
         head()
