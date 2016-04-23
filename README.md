@@ -15,7 +15,7 @@
                       |_|    ||   _____//    |_| //      \\||____ ||  \\ ||____ | \\
 ```
 
-A very simple python script to check what your friend are doing on coding sites. You can see you friends **Last visit**, **Last question solved**, **Last contest given**. Currently, i am working on the *version02* of script. You can download the version01 of this script [here!](https://github.com/amarlearning/PyStalker.git)
+A very simple python script to check what your friend are doing on coding sites. You can see you friends **Last visit**, **Last question solved**, **Last contest given**. Currently, i am working on the *version02* of script. You can download the version01 of this script [here!](https://github.com/amarlearning/PyStalker/archive/ver02.zip)
 
 ***
 
