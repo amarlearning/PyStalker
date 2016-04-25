@@ -18,17 +18,24 @@
 A very simple python script to check what your friend are doing on coding sites. You can see you friends **Last visit**, **Last question solved**, **Last contest given**. Currently, i am working on the *version02* of script. You can download the version01 of this script [here!](https://github.com/amarlearning/PyStalker/archive/ver02.zip)
 
 ***
-
+<!--https://youtu.be/HeY2f43b59s-->
 ##Index
-
+- [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
   - [Clone it](#clone-it)
   - [Run it](#run-it)
 - [Supported platforms](#supported-platforms)
-- [Screenshots](#screenshots)
 - [Issues](#issues)
 - [License](#license)
+
+***
+
+##Demo
+[:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
+Watch a live demo of it working here
+
+[![asciicast](https://github.com/amarlearning/PyStalker/raw/master/screenshots/video.png)](https://youtu.be/HeY2f43b59s)
 
 ***
 
@@ -79,14 +86,7 @@ python stalker_ver01.py
 | OS X | :white_check_mark: Full support  |
 | Windows | :white_check_mark: Full support |
 ***
-##ScreenShots
-[:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
-![PyStalker](https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/1.jpg?token=AI8v2YYvClFkyvh_2VeZGPz5IAsSA1p5ks5W_O_wwA%3D%3D)
-<img src="https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/3.jpg?token=AI8v2XfIJxKZgAELUhviP7xu_y4VUSG-ks5W_PBswA%3D%3D" style="width:400px;height:400px">
-<!--![Pystalker](https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/3.jpg?token=AI8v2XfIJxKZgAELUhviP7xu_y4VUSG-ks5W_PBswA%3D%3D)-->
-
-***
 
 ## Issues
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
