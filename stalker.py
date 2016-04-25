@@ -158,7 +158,33 @@ def get_webpage_data(webpage,username) :
 def print_in_style(catch,username) :
     table = [[1,username,catch[10:]]]
     headers = ["Sno.","Username", "Last Visit"]
-    print tabulate(table, headers, tablefmt="grid")
+    print tabulate(table, headers, tablefmt="fancy_grid")
+    space()
+    puts(colored.magenta("Note : press '1' to return back to menu."))
+    puts(colored.magenta("Note : press '0' to exit."))
+    space()
+    x = int(raw_input("Action : "))
+    if(x == 1) :
+        flag = 0
+        call_defined_function(menu(flag))
+    elif(x == 0) :
+        clear()
+    else :
+        flag = 1
+        call_defined_function(menu(flag))
+
+def print_full_table(mylist) :
+    header = ["Sno.","Username", "Last Visit"]
+    cwd = os.getcwd()
+    file_path = cwd+"\DATA"
+    file_content = open(file_path)
+    users_list = file_content.read().split()
+    loop = 0
+    table = []
+    print "Sno. \t username \t Last Visit"
+    for x in mylist :
+        print " "+ str(loop+1) + "\t " + users_list[loop] +"\t "+ x[10:]
+        loop += 1
 
 def find_what_you_are_looking_for(scrapper,username) :
     matches = scrapper.find('div',{'id':'pageContent'})
@@ -197,6 +223,60 @@ def add_new_name(username) :
     else :
         flag = 3
         call_defined_function(menu(flag))
+def full_play() :
+    """hacking into your system..lolz wait means stalking all data"""
+    loop = 1
+    cwd = os.getcwd()
+    file_path = cwd+"\DATA"
+    file_content = open(file_path)
+    users_list = file_content.read().split()
+    puts(colored.yellow("Getting data from internet."))
+    puts(colored.yellow("started stalking user accounts."))
+    space()
+    for user in users_list :
+        # 
+        # 
+        # 
+        # 
+        url = "http://codeforces.com/profile/" + user
+        response = urllib.urlopen(url)
+        if response == None :
+            print "Check your Internet conneciton! Not working."
+        else :
+            loop =2
+            scrapper = BeautifulSoup(response , 'html.parser')
+            matches = scrapper.prettify()
+            matches = scrapper.find('div',{'id':'pageContent'})
+            match = matches.find('div',{'class':'roundbox'})
+            match = match.find('ul')
+            mylist = []
+            for li in match.find_all('li') :
+                catch = li.get_text()
+                if "Last visit" in catch :
+                    catch = catch.strip()
+                    catch = re.sub(r"\s", "", catch)
+                    mylist.append(catch)
+        # 
+        # 
+        # 
+        # 
+    if loop == 1 :
+        puts(colored.cyan("message : No entries found!"))
+    else : 
+        print_full_table(mylist)
+    space()
+    puts(colored.magenta("Note : press '1' to return back to menu."))
+    puts(colored.magenta("Note : press '0' to exit."))
+    space()
+    x = int(raw_input("Action : "))
+    if(x == 1) :
+        flag = 0
+        call_defined_function(menu(flag))
+    elif(x == 0) :
+        clear()
+    else :
+        flag = 1
+        call_defined_function(menu(flag))
 
 def show_all_data() :
     """showing all entries present in the data file"""
@@ -212,6 +292,34 @@ def show_all_data() :
         loop = loop + 1
     if loop == 1 :
         puts(colored.cyan("message : No entries found!"))
+    space()
+    puts(colored.magenta("Note : press '1' to return back to menu."))
+    puts(colored.magenta("Note : press '0' to exit."))
+    space()
+    x = int(raw_input("Action : "))
+    if(x == 1) :
+        flag = 0
+        call_defined_function(menu(flag))
+    elif(x == 0) :
+        clear()
+    else :
+        flag = 1
+        call_defined_function(menu(flag))
+
+def show_doc() :
+    doc = """
+A very simple python script to check what your friend are doing on coding sites.
+You can see you friends Last visit, Last question solved, Last contest given.
+
+- Simple to use : Built with love so it's easy to use. Problem ? see the doc.
+- Infinite options : There are many so i'll list all of them
+- Add any number of usernames.
+- single command will stalk every username.
+- you can stalk any user anonymous.
+- Secure : Belive me it's secure, till you take care of data file (no playing).
+- Text Highlighting is cross platform - Supports Linux, MAC, Windows for the terminal based highlighting.
+"""
+    puts(colored.cyan(doc))
     space()
     puts(colored.magenta("Note : press '1' to return back to menu."))
     puts(colored.magenta("Note : press '0' to exit."))
@@ -273,6 +381,14 @@ def call_defined_function(value) :
         """display all the data present in the data file."""
         head()
         show_all_data()
+    elif(value == 5): 
+        """display all the data present in the data file."""
+        head()
+        full_play()
+    elif(value == 7): 
+        """display all the data present in the data file."""
+        head()
+        show_doc()
     elif(value == 0):
         clear()
     else :
