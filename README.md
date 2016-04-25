@@ -83,7 +83,7 @@ python stalker_ver01.py
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 ![PyStalker](https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/1.jpg?token=AI8v2YYvClFkyvh_2VeZGPz5IAsSA1p5ks5W_O_wwA%3D%3D)
-<img src="https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/3.jpg?token=AI8v2XfIJxKZgAELUhviP7xu_y4VUSG-ks5W_PBswA%3D%3D" style="width:500px;height:400px">
+<img src="https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/3.jpg?token=AI8v2XfIJxKZgAELUhviP7xu_y4VUSG-ks5W_PBswA%3D%3D" style="width:400px;height:400px">
 <!--![Pystalker](https://raw.githubusercontent.com/amarlearning/PyStalker/master/screenshots/3.jpg?token=AI8v2XfIJxKZgAELUhviP7xu_y4VUSG-ks5W_PBswA%3D%3D)-->
 
 ***
