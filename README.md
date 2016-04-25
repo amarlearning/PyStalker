@@ -26,6 +26,8 @@ A very simple python script to check what your friend are doing on coding sites.
   - [Clone it](#clone-it)
   - [Run it](#run-it)
 - [Supported platforms](#supported-platforms)
+- [Contributing](#contributing)
+  - [To-do](#to-do)
 - [Issues](#issues)
 - [License](#license)
 
@@ -33,8 +35,8 @@ A very simple python script to check what your friend are doing on coding sites.
 
 ##Demo
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
-Watch a live demo of it working here
 
+Watch a live demo of it working here
 [![asciicast](https://github.com/amarlearning/PyStalker/raw/master/screenshots/videogithub.png)](https://youtu.be/HeY2f43b59s)
 
 ***
@@ -87,6 +89,23 @@ python stalker_ver01.py
 | Windows | :white_check_mark: Full support |
 ***
 
+## Contributing
+[:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
+
+#### To-do
+    
+- [ ] Make it password protected.
+- [x] Allow user to delete the records.
+- [ ] Make it pip installable
+- [x] check the validity of username.
+- [ ] Add functionality of adding multiple usernames. 
+- [x] Ability to edit the content of a Data file.
+- [x] Add python3 support
+- [ ] Encrypt the `DATA` file using **Sqlcipher**
+- [ ] Add better UI using **urwid**
+
+
+***
 
 ## Issues
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
