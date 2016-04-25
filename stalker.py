@@ -181,6 +181,7 @@ def print_full_table(mylist) :
     users_list = file_content.read().split()
     loop = 0
     table = []
+    print len(mylist)
     print "Sno. \t username \t Last Visit"
     for x in mylist :
         print " "+ str(loop+1) + "\t " + users_list[loop] +"\t "+ x[10:]
@@ -230,20 +231,19 @@ def full_play() :
     file_path = cwd+"\DATA"
     file_content = open(file_path)
     users_list = file_content.read().split()
-    puts(colored.yellow("Getting data from internet."))
-    puts(colored.yellow("started stalking user accounts."))
+    puts(colored.cyan("[ Getting data from internet.. ]"))
+    puts(colored.green("[ Started stalking user accounts.. ]"))
     space()
+
+
+
+    print "Sno. \t username \t Last Visit"
     for user in users_list :
-        # 
-        # 
-        # 
-        # 
         url = "http://codeforces.com/profile/" + user
         response = urllib.urlopen(url)
         if response == None :
             print "Check your Internet conneciton! Not working."
         else :
-            loop =2
             scrapper = BeautifulSoup(response , 'html.parser')
             matches = scrapper.prettify()
             matches = scrapper.find('div',{'id':'pageContent'})
@@ -255,15 +255,12 @@ def full_play() :
                 if "Last visit" in catch :
                     catch = catch.strip()
                     catch = re.sub(r"\s", "", catch)
-                    mylist.append(catch)
-        # 
-        # 
-        # 
-        # 
+                    print " "+ str(loop+1) + "\t " + user +"\t "+ catch[10:]
+                    loop += 1
     if loop == 1 :
         puts(colored.cyan("message : No entries found!"))
-    else : 
-        print_full_table(mylist)
+    # else : 
+    #     print_full_table(mylist)
     space()
     puts(colored.magenta("Note : press '1' to return back to menu."))
     puts(colored.magenta("Note : press '0' to exit."))
