@@ -99,6 +99,8 @@ python stalker_ver01.py
 ## Contributing
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
+> All contributions accepted.
+
 #### To-do
     
 - [ ] Make it password protected.
