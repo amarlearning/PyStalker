@@ -62,7 +62,7 @@ def check_already_present(username) :
     """because redundancy is not good"""
     loop = 0
     cwd = os.getcwd()
-    file_path = cwd+"\DATA"   
+    file_path = cwd+"/DATA"   
     file_content = open(file_path)
     file_read = file_content.read()
     users_list = file_read.split()
@@ -74,7 +74,7 @@ def check_already_present(username) :
 def delete_a_username(delete_node) :
     """no need to stalk everyone everytime"""
     cwd = os.getcwd()
-    file_path = cwd+"\DATA"   
+    file_path = cwd+"/DATA"   
     file_content = open(file_path)
     file_read = file_content.read()
     users_list = file_read.split()
@@ -89,7 +89,7 @@ def delete_a_username(delete_node) :
         del users_list[flag]
         print users_list
         cwd = os.getcwd()
-        file_path = cwd+"\DATA"   
+        file_path = cwd+"/DATA"   
         file_content = open(file_path,'w')
         for user in users_list :
             user = " " + user
@@ -135,7 +135,7 @@ def add_name_to_data(username) :
         carry = check_already_present(username)
         if carry == 0 :
             cwd = os.getcwd()
-            file_path = cwd+"\DATA"
+            file_path = cwd+"/DATA"
             file_content = open(file_path,'a')
             username = " " + username
             file_content.write(username)
@@ -176,7 +176,7 @@ def print_in_style(catch,username) :
 def print_full_table(mylist) :
     header = ["Sno.","Username", "Last Visit"]
     cwd = os.getcwd()
-    file_path = cwd+"\DATA"
+    file_path = cwd+"/DATA"
     file_content = open(file_path)
     users_list = file_content.read().split()
     loop = 0
@@ -213,7 +213,7 @@ def add_new_name(username) :
         carry = check_already_present(username)
         if carry == 0 :
             cwd = os.getcwd()
-            file_path = cwd+"\DATA"
+            file_path = cwd+"/DATA"
             file_content = open(file_path,'a')
             username = " " + username
             file_content.write(username)
@@ -228,7 +228,7 @@ def full_play() :
     """hacking into your system..lolz wait means stalking all data"""
     loop = 1
     cwd = os.getcwd()
-    file_path = cwd+"\DATA"
+    file_path = cwd+"/DATA"
     file_content = open(file_path)
     users_list = file_content.read().split()
     puts(colored.cyan("[ Getting data from internet.. ]"))
@@ -279,7 +279,7 @@ def show_all_data() :
     """showing all entries present in the data file"""
     loop = 1
     cwd = os.getcwd()
-    file_path = cwd+"\DATA"
+    file_path = cwd+"/DATA"
     file_content = open(file_path)
     users_list = file_content.read().split()
     puts(colored.green("List of entries present in data file."))
