@@ -105,7 +105,6 @@ python stalker_ver01.py
     
 - [ ] Make it password protected.
 - [x] Allow user to delete the records.
-- [ ] Make it pip installable
 - [x] check the validity of username.
 - [ ] Add functionality of adding multiple usernames at a time. 
 - [x] Ability to edit the content of a Data file.
