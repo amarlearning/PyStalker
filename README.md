@@ -122,7 +122,7 @@ You can report the bugs at the [issue tracker](https://github.com/amarlearning/P
 
 **OR**
 
-You can [tweet me](https://twitter.com/amarpandey007) if you can't get it to work. In fact, you should tweet me anyway.
+You can [tweet me](https://twitter.com/iamarpandey) if you can't get it to work. In fact, you should tweet me anyway.
 
 ***
 
