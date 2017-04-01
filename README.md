@@ -1,5 +1,5 @@
 # PyStalker
-## [Command line Stalking using Python]
+### [Command line Stalking using Python]
 
 <a href="https://travis-ci.org/amarlearning/PyStalker"><img src="https://travis-ci.org/amarlearning/PyStalker.svg?branch=master" alt="Travis"></a>
 <a href="http://amarlearning.mit-license.org/"><img src="https://img.shields.io/pypi/l/pyzipcode-cli.svg" alt="mit license"></a>
