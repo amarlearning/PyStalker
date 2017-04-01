@@ -18,7 +18,7 @@
                       | |  \\  // _______ ________   __                   _____  ______
                       | |   \\// \\       \__  __/  //\\   ||     ||  // ||     |    //
                       | |    ||   \\_____    | |   //__\\  ||     ||//   ||____ |___//
-                      | |    ||         //   | |  //====\\ ||     ||\\   ||     |\\
+                      | |    ||         //   | |  //____\\ ||     ||\\   ||     |\\
                       |_|    ||   _____//    |_| //      \\||____ ||  \\ ||____ | \\
 ```
 
@@ -26,7 +26,7 @@ A very simple python script to check what your friend are doing on coding sites.
 
 ***
 <!--https://youtu.be/HeY2f43b59s-->
-##Index
+## Index
 - [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
@@ -40,7 +40,7 @@ A very simple python script to check what your friend are doing on coding sites.
 
 ***
 
-##Demo
+## Demo
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 Watch a live demo of it working here
@@ -48,7 +48,7 @@ Watch a live demo of it working here
 
 ***
 
-##Features
+## Features
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 - **Simple to use** : Built with love so it's easy to use. Problem ? see the doc.
@@ -61,7 +61,7 @@ Watch a live demo of it working here
 
 ***
 
-##Installation
+## Installation
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 #### Clone it
@@ -126,7 +126,7 @@ You can [tweet me](https://twitter.com/iamarpandey) if you can't get it to work.
 
 ***
 
-##License
+## License
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 Built with ♥ by Amar Prakash Pandey([@amarlearning](http://github.com/amarlearning)) under [MIT License](http://amarlearning.mit-license.org/) 
