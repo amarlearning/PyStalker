@@ -38,7 +38,7 @@ A very simple python script to check what your friend are doing on coding sites.
 [:arrow_up:\[Back to Top\]](https://github.com/amarlearning/PyStalker#pystalker)
 
 Watch a live demo of it working here
-[![asciicast](https://github.com/amarlearning/PyStalker/raw/master/screenshots/videogithub.png)](https://youtu.be/HeY2f43b59s)
+[![asciicast](https://github.com/amarlearning/PyStalker/raw/master/screenshots/screenshot.png)](https://youtu.be/HeY2f43b59s)
 
 ***
 
